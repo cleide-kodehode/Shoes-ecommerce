@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #DE522F;
+}
+
+
+.container {
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.product {
+    background: #fafafa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px ;
+}
+
+
+
+.image {
+    width: 300px;
+    height: 150px;
+    margin: auto;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.8s linear;
+}
+
+
+.color {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    justify-content: center;
+}
+
+/* span is in this case a tag without point */
+span {
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+    border-radius: 50%; 
+    background-color: #DE522F;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.green {
+    background: #9ABE62;
+}
+
+.black {
+    background:  #222627;
+}
+
+ .red {
+    background: #B41D26;
+}
+
+.orange {
+    background: #De522F;
+}
+
+/*selecting the circle of color */
+.active::after {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    border: 2px solid #333;
+    position: absolute;
+    border-radius: 50%;
+    left: -3px;
+    top: -3px;
+}
+
+
+.title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.detail  {
+    text-align: center;    
+}
+
+
+.detail p  {
+    font-size: 20px;
+    margin: 15px;
+}
+
+
+.detail span  {
+    font-size: 20px; 
+    background: #eee   
+}
+
+
+.detail a  {
+    text-decoration: none;
+    background: #DE522F;
+    border-radius: 8px;
+    color: white;
+    margin: 15px;
+    padding: 8px 18px;
+}
+
+
+

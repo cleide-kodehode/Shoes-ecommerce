@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> E-commerce & products </title>
+</head>
+<body>
+    <div class="container">  
+        <div class="product">
+            <div class="image">
+                <img class="product-image" src="images/orange.png" alt="Puma shoes">
+            </div>
+
+            <div class="color">
+                <span class="orange active" data-image="images/orange.png" data-color="#DE522F"></span>
+                <span class="green" data-image="images/green.png" data-color="#9ABE62"> </span>
+                <span class="black" data-image="images/black.png" data-color="#222627"> </span>
+                <span class="red" data-image="images/red.png" data-color="#B41D26"> </span>
+            </div>
+
+            <div class="title"> PUMA velocity Nitro Men's Running Shoes </div>
+            <div class="detail">
+                <p> Price: <span> $150 </span></p>
+                <a href="#"> Add to cart </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous">
+    </script>  
+
+    <script>
+        $(".color span").click(function() {
+            $(".color span").removeClass("active");
+            $(this).addClass("active");
+            $(".detail span").css("color",$(this).attr("data-color"));
+            $(".detail a").css("background",$(this).attr("data-color"));
+            $(".product-image").attr("src",$(this).attr("data-image"));
+            $(".body").css("background",$(this).attr("data-color"));
+        });
+    </script>
+    
+</body>
+</html>
